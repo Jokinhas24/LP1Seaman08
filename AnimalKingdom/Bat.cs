@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AnimalKingdom
 {
-    public class Bat : Animal, IMammal
+    public class Bat : Animal, IMammal, ICanFly
     {
         public override string Sound()
         {
@@ -14,6 +14,10 @@ namespace AnimalKingdom
         public readonly int NumberOfNipples
         {
             get { return 4; }
+        }
+        public readonly int NumberOfWings
+        {
+            get { return 2; }
         }
     }
 }
