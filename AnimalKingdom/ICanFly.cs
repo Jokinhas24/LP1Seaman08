@@ -7,6 +7,6 @@ namespace AnimalKingdom
 {
     public interface ICanFly
     {
-        public readonly int NumberOfWings { get; } 
+        int NumberOfWings { get; }
     }
 }

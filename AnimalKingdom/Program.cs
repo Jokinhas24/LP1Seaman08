@@ -7,7 +7,7 @@ namespace AnimalKingdom
     {
         static void Main(string[] args)
         {
-            array string Animals = new array();
+            array string Animals = new array[10]();
 
             for (int i = 0; i < 10; i++)
             {
@@ -16,7 +16,7 @@ namespace AnimalKingdom
             foreach (animal in Animals)
             {
                 Console.WriteLine(animal)
-                Console.WriteLine($"This animal sounds like {animal.Sound()}")
+                Console.WriteLine($"This animal's {animal.Sound()}")
 
                 if animal in IMammal
                 {

@@ -11,11 +11,11 @@ namespace AnimalKingdom
         {
             return base.Sound() + "KiKi";
         }
-        public readonly int NumberOfNipples
+        int IMammal.NumberOfNipples
         {
             get { return 4; }
         }
-        public readonly int NumberOfWings
+        int ICanFly.NumberOfWings
         {
             get { return 2; }
         }

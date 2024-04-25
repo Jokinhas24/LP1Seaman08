@@ -6,7 +6,7 @@
         {
             return base.Sound() + "Miau";
         }
-        public readonly int NumberOfNipples
+        int IMammal.NumberOfNipples
         {
             get { return 6; }
         }
