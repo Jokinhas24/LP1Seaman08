@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
+namespace PlayerManager3 // >>> Change to PlayerManager2 for exercise 4 <<< //
 {
     /// <summary>
     /// The player listing program.
@@ -74,7 +74,7 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
 
                 // Wait for user to press a key...
                 Console.Write("\nPress any key to continue...");
-                Console.ReadLine();
+                Console.ReadKey(true);
                 Console.WriteLine("\n");
 
                 // Loop keeps going until players choses to quit (option 4)
@@ -98,12 +98,9 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </summary>
         private void InsertPlayer()
         {
-            Console.WriteLine($"Insert Player's name: ");
-            string name = Console.ReadLine();
-            Console.WriteLine("Insert Player's Score: ");
-            string score = Console.ReadLine();
-            Player player = new Player(name, int.Parse(score));
-            playerList.Add(player);
+            // /////////////////// //
+            // COMPLETE ME PLEASE! //
+            // /////////////////// //
         }
 
         /// <summary>
@@ -117,11 +114,9 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </param>
         private static void ListPlayers(IEnumerable<Player> playersToList)
         {
-            Console.WriteLine("\nListing Players:");
-            foreach (Player player in playersToList)
-            {
-                Console.WriteLine($"- Name: {player.Name} --> Score: {player.Score}");
-            }
+            // /////////////////// //
+            // COMPLETE ME PLEASE! //
+            // /////////////////// //
         }
 
         /// <summary>
@@ -148,10 +143,9 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
             {
                 if (player.Score > minScore)
                 {
-                    playersWithScoreGreaterThan.Add(player);
+                    yield return player;
                 }
             }
-            return playersWithScoreGreaterThan;
         }
     }
 }

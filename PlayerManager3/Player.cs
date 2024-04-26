@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PlayerManager1
+namespace PlayerManager3
 {
-    public class Player
+    public class Player : IComparable<Player>
     {
         public string Name { get; set; }
         public int Score { get; set; }
@@ -14,6 +14,14 @@ namespace PlayerManager1
         {
             Name = name;
             Score = score;
+        }
+        public int CompareTo(Player howeverIwant)
+        {
+            if (howeverIwant == null)
+            {
+                return 1;
+            }
+            return this.Score.CompareTo(howeverIwant.Score);
         }
     }
 }
