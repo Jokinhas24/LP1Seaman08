@@ -119,6 +119,11 @@ namespace PlayerManager4 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </param>
         private static void ListPlayers(IEnumerable<Player> playersToList)
         {
+            Console.WriteLine("\nList by Score or Alphabetical order?");
+            string order = Console.ReadLine();
+            Console.WriteLine("List A to Z or Z to A?")
+            string order2 = Console.ReadLine();
+            
             Console.WriteLine("\nListing Players:");
             foreach (Player player in playersToList)
             {
@@ -134,7 +139,7 @@ namespace PlayerManager4 // >>> Change to PlayerManager2 for exercise 4 <<< //
             Console.WriteLine("\nWhat's the Minimum Score to Compare to: ");
             string minScore = Console.ReadLine();
             Console.WriteLine("\nListing Players With Score Greater Than:");
-            
+
             ListPlayers(GetPlayersWithScoreGreaterThan(int.Parse(minScore)));
         }
 
