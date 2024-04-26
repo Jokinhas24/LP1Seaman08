@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PlayerManager3 // >>> Change to PlayerManager2 for exercise 4 <<< //
 {
@@ -118,6 +119,7 @@ namespace PlayerManager3 // >>> Change to PlayerManager2 for exercise 4 <<< //
         private static void ListPlayers(IEnumerable<Player> playersToList)
         {
             Console.WriteLine("\nListing Players:");
+            var playerToList = playersToList.OrderByDescending(player => player.Score);
             foreach (Player player in playersToList)
             {
                 Console.WriteLine($"- Name: {player.Name} --> Score: {player.Score}");
@@ -132,6 +134,7 @@ namespace PlayerManager3 // >>> Change to PlayerManager2 for exercise 4 <<< //
             Console.WriteLine("\nWhat's the Minimum Score to Compare to: ");
             string minScore = Console.ReadLine();
             Console.WriteLine("\nListing Players With Score Greater Than:");
+            /// var playersToList.OrderByDescending(player, player.score);
             foreach (Player player in (GetPlayersWithScoreGreaterThan(int.Parse(minScore))))
             {
                 Console.WriteLine($"- Name: {player.Name} --> Score: {player.Score}");
