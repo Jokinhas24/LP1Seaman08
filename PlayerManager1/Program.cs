@@ -136,11 +136,17 @@ namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// <returns>
         /// An enumerable of players with a score higher than the given value.
         /// </returns>
-        ///private IEnumerable<Player> GetPlayersWithScoreGreaterThan(int minScore)
-        ///{
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
-        ///}
+        private IEnumerable<Player> GetPlayersWithScoreGreaterThan(int minScore)
+        {
+            List<Player> playersWithScoreGreaterThan = new List<Player>();
+            foreach (Player player in playerList)
+            {
+                if (player.Score > minScore)
+                {
+                    playersWithScoreGreaterThan.Add(player);
+                }
+            }
+            return playersWithScoreGreaterThan;
+        }
     }
 }
