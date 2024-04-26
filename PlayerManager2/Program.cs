@@ -98,9 +98,12 @@ namespace PlayerManager2 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </summary>
         private void InsertPlayer()
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            Console.WriteLine("\nInsert Player's name: ");
+            string name = Console.ReadLine();
+            Console.WriteLine("\nInsert Player's Score: ");
+            string score = Console.ReadLine();
+            Player player = new Player(name, int.Parse(score));
+            playerList.Add(player);
         }
 
         /// <summary>
@@ -114,9 +117,11 @@ namespace PlayerManager2 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </param>
         private static void ListPlayers(IEnumerable<Player> playersToList)
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            Console.WriteLine("\nListing Players:");
+            foreach (Player player in playersToList)
+            {
+                Console.WriteLine($"- Name: {player.Name} --> Score: {player.Score}");
+            }
         }
 
         /// <summary>
@@ -124,9 +129,13 @@ namespace PlayerManager2 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </summary>
         private void ListPlayersWithScoreGreaterThan()
         {
-            // /////////////////// //
-            // COMPLETE ME PLEASE! //
-            // /////////////////// //
+            Console.WriteLine("\nWhat's the Minimum Score to Compare to: ");
+            string minScore = Console.ReadLine();
+            Console.WriteLine("\nListing Players With Score Greater Than:");
+            foreach (Player player in (GetPlayersWithScoreGreaterThan(int.Parse(minScore))))
+            {
+                Console.WriteLine($"- Name: {player.Name} --> Score: {player.Score}");
+            }
         }
 
         /// <summary>
