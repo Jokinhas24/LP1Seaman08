@@ -21,7 +21,8 @@ namespace PlayerManager3
             {
                 return 1;
             }
-            return this.Score.CompareTo(howeverIwant.Score);
+            
+            return howeverIwant.Score.CompareTo(this.Score);
         }
     }
 }

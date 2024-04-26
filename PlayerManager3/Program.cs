@@ -49,6 +49,7 @@ namespace PlayerManager3 // >>> Change to PlayerManager2 for exercise 4 <<< //
             // Main program loop
             do
             {
+                playerList.Sort();
                 // Show menu and get user option
                 ShowMenu();
                 option = Console.ReadLine();
@@ -75,7 +76,7 @@ namespace PlayerManager3 // >>> Change to PlayerManager2 for exercise 4 <<< //
 
                 // Wait for user to press a key...
                 Console.Write("\nPress any key to continue...");
-                Console.ReadKey(true);
+                Console.ReadLine();
                 Console.WriteLine("\n");
 
                 // Loop keeps going until players choses to quit (option 4)
@@ -119,7 +120,6 @@ namespace PlayerManager3 // >>> Change to PlayerManager2 for exercise 4 <<< //
         private static void ListPlayers(IEnumerable<Player> playersToList)
         {
             Console.WriteLine("\nListing Players:");
-            var playerToList = playersToList.OrderByDescending(player => player.Score);
             foreach (Player player in playersToList)
             {
                 Console.WriteLine($"- Name: {player.Name} --> Score: {player.Score}");
