@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalKingdom", "AnimalKing
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerManager1", "PlayerManager1\PlayerManager1.csproj", "{7821438D-A5DA-4B1D-A9E5-666FFA6EBF78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerManager2", "PlayerManager2\PlayerManager2.csproj", "{8FCD6F42-A3FA-41DC-B8EE-7D37C65F6255}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{7821438D-A5DA-4B1D-A9E5-666FFA6EBF78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7821438D-A5DA-4B1D-A9E5-666FFA6EBF78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7821438D-A5DA-4B1D-A9E5-666FFA6EBF78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FCD6F42-A3FA-41DC-B8EE-7D37C65F6255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FCD6F42-A3FA-41DC-B8EE-7D37C65F6255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FCD6F42-A3FA-41DC-B8EE-7D37C65F6255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FCD6F42-A3FA-41DC-B8EE-7D37C65F6255}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
